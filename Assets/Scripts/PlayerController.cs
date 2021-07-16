@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         if (Time.time >= timeStamp && Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(bomb, transform.position, transform.rotation);
+            Instantiate(bomb, transform.position + new Vector3(0, 0, -1), transform.rotation);
             timeStamp = Time.time + timeDelay;
         }
 
