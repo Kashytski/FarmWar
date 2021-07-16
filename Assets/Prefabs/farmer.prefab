@@ -17,6 +17,7 @@ MonoBehaviour:
   - {fileID: -9215070241222095863, guid: c001f5b7384d67147b752283c677ee73, type: 3}
   - {fileID: -7334331953504848966, guid: e6a8749136f375f428494f94f344823f, type: 3}
   - {fileID: -5117249517182225887, guid: e6a8749136f375f428494f94f344823f, type: 3}
+  counter: {fileID: 0}
 --- !u!1001 &6228448617656602213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33,11 +34,31 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5556947954782602362, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.26999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556947954782602362, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556947954782602362, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556947954782602362, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 5556947954782602362, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 9.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556947954782602364, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
+      propertyPath: m_Size.x
+      value: 4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556947954782602364, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
+      propertyPath: m_Size.y
       value: 9.4
       objectReference: {fileID: 0}
     - target: {fileID: 5556947954782602364, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
@@ -50,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5556947954782602366, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
       propertyPath: m_Name
-      value: enemy
+      value: farmer
       objectReference: {fileID: 0}
     - target: {fileID: 5556947954782602367, guid: 0475d20d16e357b4bb0cb2f0646d0d41, type: 3}
       propertyPath: m_RootOrder

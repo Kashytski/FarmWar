@@ -6,6 +6,7 @@ TagManager:
   tags:
   - boom
   - enemy
+  - some_thing
   layers:
   - Default
   - TransparentFX

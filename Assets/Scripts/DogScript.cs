@@ -25,19 +25,17 @@ public class DogScript : MonoBehaviour
 
     void updateFarmerPosition()
     {
-        if (transform.position.x < -5.4)
+        if (transform.position.x < -5.3)
             StartCoroutine(BackToLine_1());
 
-        if (transform.position.x > 5.2)
+        if (transform.position.x > 5.05)
             StartCoroutine(BackToLine_2());
 
-        if (spriteRender.sprite == arraySprite[1] && transform.position.y < 2)
+        if (spriteRender.sprite == arraySprite[1])
             rigidBody.velocity = new Vector3(0.45f, 4, 0);
-        else if (transform.position.y >= 2)  spriteRender.sprite = arraySprite[0];
 
-        if (spriteRender.sprite == arraySprite[0] && transform.position.y > -3)
+        if (spriteRender.sprite == arraySprite[0])
             rigidBody.velocity = new Vector3(-0.45f, -4, 0);
-        else if (transform.position.y <= -3) spriteRender.sprite = arraySprite[1];
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -46,6 +44,13 @@ public class DogScript : MonoBehaviour
         {
             counter.text = $"{int.Parse(counter.text) + 30}";
             StartCoroutine(Stanlock());
+        }
+
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "boom")
+        {
+            if (spriteRender.sprite == arraySprite[0])
+                spriteRender.sprite = arraySprite[1];
+            else spriteRender.sprite = arraySprite[0];
         }
     }
 
@@ -66,14 +71,17 @@ public class DogScript : MonoBehaviour
     IEnumerator Stanlock()
     {
         if (spriteRender.sprite == arraySprite[0])
+        {
             spriteRender.sprite = arraySprite[2];
-        else spriteRender.sprite = arraySprite[3];
-
-        yield return new WaitForSecondsRealtime(3f);
-
-        if (spriteRender.sprite == arraySprite[2])
+            yield return new WaitForSecondsRealtime(3f);
             spriteRender.sprite = arraySprite[0];
-        else spriteRender.sprite = arraySprite[1];
+        }   
+        else
+        {
+            spriteRender.sprite = arraySprite[3];
+            yield return new WaitForSecondsRealtime(3f);
+            spriteRender.sprite = arraySprite[1];
+        }
 
         StopCoroutine(Stanlock());
     }

@@ -25,19 +25,17 @@ public class FarmerScript : MonoBehaviour
 
     void updateFarmerPosition()
     {
-        if (transform.position.y > 2.5)
+        if (transform.position.y > 2)
             StartCoroutine(BackToLine_1());
 
-        if (transform.position.y < -2.3)
+        if (transform.position.y < -2)
             StartCoroutine(BackToLine_2());
 
-        if (spriteRender.sprite == arraySprite[0] && transform.position.x < 2.8)
+        if (spriteRender.sprite == arraySprite[0])
             rigidBody.velocity = new Vector3(4, 0, 0);
-        else if (transform.position.x >= 2.8)  spriteRender.sprite = arraySprite[1];
 
-        if (spriteRender.sprite == arraySprite[1] && transform.position.x > -3.2)
-            rigidBody.velocity = new Vector3(-4, 0, 0);
-        else if (transform.position.x <= -3.2) spriteRender.sprite = arraySprite[0];
+        if (spriteRender.sprite == arraySprite[1])
+            rigidBody.velocity = new Vector3(-4, 0, 0); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,33 +45,43 @@ public class FarmerScript : MonoBehaviour
             counter.text = $"{int.Parse(counter.text) + 20}";
             StartCoroutine(Stanlock());
         }
+
+        if (collision.gameObject.tag != "Player" && collision.gameObject.tag != "boom")
+        {
+            if (spriteRender.sprite == arraySprite[0])
+                spriteRender.sprite = arraySprite[1];
+            else spriteRender.sprite = arraySprite[0];
+        }
     }
 
     IEnumerator BackToLine_1()
     {
         yield return new WaitForSecondsRealtime(2f);
-        transform.position = new Vector3(-3.2f, 2, -2);
+        transform.position = new Vector3(-2.9f, 1.9f, -2);
         StopCoroutine(BackToLine_1());
     }
 
     IEnumerator BackToLine_2()
     {
         yield return new WaitForSecondsRealtime(2f);
-        transform.position = new Vector3(2.8f, -1.8f, -2);
+        transform.position = new Vector3(2.5f, -1.9f, -2);
         StopCoroutine(BackToLine_2());
     }
 
     IEnumerator Stanlock()
     {
         if (spriteRender.sprite == arraySprite[0])
+        {
             spriteRender.sprite = arraySprite[2];
-        else spriteRender.sprite = arraySprite[3];
-
-        yield return new WaitForSecondsRealtime(3f);
-
-        if (spriteRender.sprite == arraySprite[2])
+            yield return new WaitForSecondsRealtime(3f);
             spriteRender.sprite = arraySprite[0];
-        else spriteRender.sprite = arraySprite[1];
+        }
+        else
+        {
+            spriteRender.sprite = arraySprite[3];
+            yield return new WaitForSecondsRealtime(3f);
+            spriteRender.sprite = arraySprite[1];
+        }
 
         StopCoroutine(Stanlock());
     }
