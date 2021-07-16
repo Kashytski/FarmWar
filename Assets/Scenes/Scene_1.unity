@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 539988275}
   m_Layer: 0
   m_Name: pigPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,10 +356,10 @@ MonoBehaviour:
   - {fileID: 1382654831687872026, guid: 18ec1ab049f02df4da70d0cb69a1e510, type: 3}
   - {fileID: 40422208409524962, guid: 18ec1ab049f02df4da70d0cb69a1e510, type: 3}
   - {fileID: -4671057516089923990, guid: 18ec1ab049f02df4da70d0cb69a1e510, type: 3}
-  bomb: {fileID: 0}
-  steak_1: {fileID: 0}
-  steak_2: {fileID: 0}
-  gameOver: {fileID: 0}
+  bomb: {fileID: 4356422205198851420, guid: 153f8a513ad313b4c9d7204a5e397223, type: 3}
+  steak_1: {fileID: 1047439716855100042, guid: 9088555ad3b247449b9bddbf4db3de32, type: 3}
+  steak_2: {fileID: 9167456467973576159, guid: 9f30dc9f6cf731b4995ccbc99204ea2c, type: 3}
+  gameOver: {fileID: 5899551120297465712, guid: 768bddad960b0944398366bfa099b3f8, type: 3}
 --- !u!1 &1667467369
 GameObject:
   m_ObjectHideFlags: 0
