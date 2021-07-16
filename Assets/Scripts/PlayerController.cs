@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
             spriteRender.sprite = arraySprites[1];
             boxCollider.size = new Vector2(5, 3);
         }
+
         else if (horizontInput > 0)
         { 
             rigidBody.velocity = new Vector3(xVelocity, 0, 0);
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
             spriteRender.sprite = arraySprites[2];
             boxCollider.size = new Vector2(3, 5);
         }
+
         else if (verticalInput > 0)
         {
             rigidBody.velocity = new Vector3(1, yVelocity, 0);

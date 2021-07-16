@@ -13,7 +13,7 @@ public class BombScript : MonoBehaviour
     IEnumerator Extantion()
     {
         yield return new WaitForSecondsRealtime(2);
-        Instantiate(Boom, gameObject.transform.position, gameObject.transform.rotation);
+        Instantiate(Boom, transform.position, transform.rotation);
         StopCoroutine(Extantion());
         Destroy(gameObject);
     }
