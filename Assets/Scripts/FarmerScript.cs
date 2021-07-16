@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class FarmerScript : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class FarmerScript : MonoBehaviour
     private SpriteRenderer spriteRender;
 
     [SerializeField] Sprite[] arraySprite;
+    [SerializeField] Text counter;
 
     void Start()
     {
@@ -40,7 +43,10 @@ public class FarmerScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "boom")
+        {
+            counter.text = $"{int.Parse(counter.text) + 20}";
             StartCoroutine(Stanlock());
+        }
     }
 
     IEnumerator BackToLine_1()
