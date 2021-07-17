@@ -8,19 +8,25 @@ public class SceneScript : MonoBehaviour
     [SerializeField] GameObject Player;
     [SerializeField] GameObject gameStart;
     [SerializeField] GameObject[] level_thing;
- 
+
+    [SerializeField] GameObject buttonStart;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            if (Player == null)
-                SceneManager.LoadScene("Scene_1");
-            else Application.Quit();
+            Application.Quit();
+    }
 
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            gameStart.SetActive(false);
-            foreach (var i in level_thing)
-                i.SetActive(true);
-        }
+    public void StartLevel()
+    {
+        gameStart.SetActive(false);
+        buttonStart.SetActive(false);
+        foreach (var i in level_thing)
+            i.SetActive(true);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene("Scene_1");
     }
 }

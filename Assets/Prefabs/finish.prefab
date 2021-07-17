@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1510862555157355421}
   - component: {fileID: 1510862555157355420}
   - component: {fileID: 1510862555157355422}
+  - component: {fileID: 1778803911}
   m_Layer: 0
   m_Name: finish
   m_TagString: Untagged
@@ -56,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 8}
+  m_Size: {x: 1, y: 8}
   m_EdgeRadius: 0
 --- !u!114 &1510862555157355422
 MonoBehaviour:
@@ -71,3 +72,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameComplete: {fileID: 3581599540290996196, guid: 387eec5500a5f1141a5f86bbf8ef98ef, type: 3}
+--- !u!114 &1778803911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510862555157355411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eb76803ba358b641acd674a1002374d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counter: {fileID: 0}
+  stone: {fileID: 0}

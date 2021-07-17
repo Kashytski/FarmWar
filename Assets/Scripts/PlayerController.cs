@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject steak_1;
     [SerializeField] GameObject steak_2;
     [SerializeField] GameObject gameOver;
+    [SerializeField] GameObject restartButton;
+
     private float timeDelay = 1.0f;
     private float timeStamp;
 
@@ -90,6 +92,7 @@ public class PlayerController : MonoBehaviour
      void DestroyPig()
     {
         Instantiate(gameOver);
+        restartButton.SetActive(true);
         Destroy(gameObject);
     }
 }

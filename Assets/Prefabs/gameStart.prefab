@@ -9,9 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3581599539634051503, guid: 387eec5500a5f1141a5f86bbf8ef98ef, type: 3}
       propertyPath: m_Text
-      value: 'Get 220 points to escape
-
-        Press W to Start'
+      value: Get 220 points to escape
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581599539634051503, guid: 387eec5500a5f1141a5f86bbf8ef98ef, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3581599540290996196, guid: 387eec5500a5f1141a5f86bbf8ef98ef, type: 3}
       propertyPath: m_Name

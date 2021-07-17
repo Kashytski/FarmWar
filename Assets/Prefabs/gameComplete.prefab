@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5899551120297465712, guid: 768bddad960b0944398366bfa099b3f8, type: 3}
       propertyPath: m_Name
-      value: gameOver
+      value: gameComplete
       objectReference: {fileID: 0}
     - target: {fileID: 5899551120297465724, guid: 768bddad960b0944398366bfa099b3f8, type: 3}
       propertyPath: m_Pivot.x
@@ -97,9 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5899551120954411323, guid: 768bddad960b0944398366bfa099b3f8, type: 3}
       propertyPath: m_Text
-      value: 'Game Complete
-
-        Press Esc to Restart'
+      value: Game Complete
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 768bddad960b0944398366bfa099b3f8, type: 3}
