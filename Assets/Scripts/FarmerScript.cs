@@ -25,12 +25,6 @@ public class FarmerScript : MonoBehaviour
 
     void updateFarmerPosition()
     {
-        if (transform.position.y > 2)
-            StartCoroutine(BackToLine_1());
-
-        if (transform.position.y < -2)
-            StartCoroutine(BackToLine_2());
-
         if (spriteRender.sprite == arraySprite[0])
             rigidBody.velocity = new Vector3(4, 0, 0);
 
@@ -54,22 +48,13 @@ public class FarmerScript : MonoBehaviour
         }
     }
 
-    IEnumerator BackToLine_1()
-    {
-        yield return new WaitForSecondsRealtime(2f);
-        transform.position = new Vector3(-2.9f, 1.9f, -2);
-        StopCoroutine(BackToLine_1());
-    }
-
-    IEnumerator BackToLine_2()
-    {
-        yield return new WaitForSecondsRealtime(2f);
-        transform.position = new Vector3(2.5f, -1.9f, -2);
-        StopCoroutine(BackToLine_2());
-    }
-
     IEnumerator Stanlock()
     {
+        if (name == "farmer_1")
+            transform.position = new Vector3(-2.9f, 1.9f, -2);
+        else
+            transform.position = new Vector3(2.5f, -1.9f, -2);
+
         if (spriteRender.sprite == arraySprite[0])
         {
             spriteRender.sprite = arraySprite[2];
@@ -81,7 +66,7 @@ public class FarmerScript : MonoBehaviour
             spriteRender.sprite = arraySprite[3];
             yield return new WaitForSecondsRealtime(3f);
             spriteRender.sprite = arraySprite[1];
-        }
+        }        
 
         StopCoroutine(Stanlock());
     }

@@ -1407,6 +1407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bushes
       objectReference: {fileID: 0}
+    - target: {fileID: 5527889373924699815, guid: 0cb1d6b1b9742f34a82403caeb47ffe2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb1d6b1b9742f34a82403caeb47ffe2, type: 3}
 --- !u!1001 &7652537356155104288
