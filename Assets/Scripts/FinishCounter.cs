@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinishCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Text counter;
+    [SerializeField] GameObject stone;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        int counterInt = int.Parse(counter.text);
+        if (counterInt > 220)
+            stone.SetActive(false);
     }
 }
