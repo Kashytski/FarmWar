@@ -25,6 +25,7 @@ public class DogScript : MonoBehaviour
 
     void updateFarmerPosition()
     {
+        //Движение в зависимости от спрайта
         if (spriteRender.sprite == arraySprite[1])
             rigidBody.velocity = new Vector3(0.45f, 4, 0);
 
@@ -34,6 +35,7 @@ public class DogScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Реакции на иные коллизии
         if (collision.gameObject.tag == "boom")
         {
             counter.text = $"{int.Parse(counter.text) + 30}";
@@ -50,6 +52,7 @@ public class DogScript : MonoBehaviour
 
     IEnumerator Stanlock()
     {
+        //Перемещение в изначальные позиции и остановка на время
         if (name == "dog_1")
             transform.position = new Vector3(-5.24f, -3, -2);
         else

@@ -40,12 +40,14 @@ public class PlayerController : MonoBehaviour
         horizontInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
+        //—павн бомбы с защитой от закликивани€
         if (Time.time >= timeStamp && Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(bomb, transform.position + new Vector3(0, 0, -1), transform.rotation);
             timeStamp = Time.time + timeDelay;
         }
 
+        //¬екторное движение во всех направлени€х со сменой спрайтов и коллизии
         if (horizontInput < 0)
         {
             rigidBody.velocity = new Vector3(-xVelocity, 0, 0);
@@ -77,6 +79,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //”слови€ соприкосновени€ с иными коллизи€ми
         if (collision.gameObject.tag == "boom")
         {
             Instantiate(steak_1, transform.position, transform.rotation);

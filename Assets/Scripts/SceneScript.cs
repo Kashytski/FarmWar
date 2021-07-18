@@ -19,6 +19,7 @@ public class SceneScript : MonoBehaviour
 
     public void StartLevel()
     {
+        //Активирует нужные игровые объекты, выключает UI элементы
         gameStart.SetActive(false);
         buttonStart.SetActive(false);
         foreach (var i in level_thing)

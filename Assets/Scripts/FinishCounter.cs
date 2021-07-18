@@ -10,6 +10,7 @@ public class FinishCounter : MonoBehaviour
 
     private void Update()
     {
+        //Условие открытия выхода
         int counterInt = int.Parse(counter.text);
         if (counterInt > 219)
             stone.SetActive(false);

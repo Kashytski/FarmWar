@@ -9,6 +9,7 @@ public class BushScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Условие уничтожения куста
         if (collision.gameObject.tag == "boom")
         {
             counter.text = $"{int.Parse(counter.text) + 5}";

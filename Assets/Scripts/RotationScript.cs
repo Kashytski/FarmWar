@@ -7,6 +7,7 @@ public class RotationScript : MonoBehaviour
 {
     void Start()
     {
+        //блокировка портретных ориентаций экрана
         Screen.autorotateToPortrait = false;
         Screen.autorotateToPortraitUpsideDown = false;
         Screen.orientation = ScreenOrientation.AutoRotation;

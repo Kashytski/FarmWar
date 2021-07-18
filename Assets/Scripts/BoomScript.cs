@@ -11,6 +11,7 @@ public class BoomScript : MonoBehaviour
 
     IEnumerator Boom()
     {
+        //Тайминг существования взрыва
         yield return new WaitForSeconds(2);
         StopCoroutine(Boom());
         Destroy(gameObject);

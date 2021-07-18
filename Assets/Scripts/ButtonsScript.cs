@@ -18,6 +18,7 @@ public class ButtonsScript : MonoBehaviour
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
     }
 
+    //Биндинг созданных кнопок для сенсорного управления
     public void ButtonW()
     {
         rigidBody.velocity = new Vector3(17, 136, 0);

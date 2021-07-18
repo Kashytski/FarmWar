@@ -12,6 +12,7 @@ public class BombScript : MonoBehaviour
 
     IEnumerator Extantion()
     {
+        //тайминг создания взрыва
         yield return new WaitForSecondsRealtime(2);
         Instantiate(Boom, transform.position, transform.rotation);
         StopCoroutine(Extantion());

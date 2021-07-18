@@ -25,6 +25,7 @@ public class FarmerScript : MonoBehaviour
 
     void updateFarmerPosition()
     {
+        //Движение в зависимости от спрайта
         if (spriteRender.sprite == arraySprite[0])
             rigidBody.velocity = new Vector3(4, 0, 0);
 
@@ -34,6 +35,7 @@ public class FarmerScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Реакции на иные коллизии
         if (collision.gameObject.tag == "boom")
         {
             counter.text = $"{int.Parse(counter.text) + 20}";
@@ -50,6 +52,7 @@ public class FarmerScript : MonoBehaviour
 
     IEnumerator Stanlock()
     {
+        //Перемещение в изначальные позиции и остановка на время
         if (name == "farmer_1")
             transform.position = new Vector3(-2.9f, 1.9f, -2);
         else
